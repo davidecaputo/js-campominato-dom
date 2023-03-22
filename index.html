@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Minato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/campo_minato_gioco_1989.png" type="image/x-icon">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container-fluid d-flex justify-content-between align-items-center h-100">
+                <div class="d-flex align-items-center w-50 gap-2">
+                    <img src="./img/campo_minato_gioco_1989.png" alt="logo">
+                    <h1>Campo Minato</h1>
+                </div>
+                <form class="d-flex align-items-center gap-2 w-25">
+                    <label>Difficoltà:</label>
+                    <select name="level" id="level" class="form-select" aria-label="Default select example">
+                        <option value="easy" selected>Facile</option>
+                        <option value="medium">Media</option>
+                        <option value="hard">Difficile</option>
+                    </select>
+                    <button class="btn btn-danger">Gioca</button>
+                </form>
+            </div>
+        </header>
+        <main class="d-flex flex-column justify-content-center align-items-center gap-5">
+            <div class="grill">
+                
+            </div>
+            <h2 class="text-white">Seleziona il livello di difficoltà</h2>
+        </main>
+        <footer class="container-fluid d-flex align-items-center fs-4">
+            Made with &hearts; by Davide
+        </footer>
+    </div>
+    
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
