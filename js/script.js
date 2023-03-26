@@ -29,6 +29,15 @@ function createBombs(numberOfBombs, numSquare){
     return bombs;
 }
 
+function controlBombs(i, bombs, squareSize){
+    const squares = document.querySelectorAll('.square');
+    if(bombs.includes(i + 1) || bombs.includes(i - 1) || bombs.includes(i + squareSize) || bombs.includes(i + (squareSize + 1)) || bombs.includes(i + (squareSize - 1)) || bombs.includes(i - squareSize) || bombs.includes(i - (squareSize + 1)) || bombs.includes(i - (squareSize - 1))){
+        console.log(i);
+        squares[i - 1].innerHTML = ` 1 `;
+    }
+}
+
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -82,6 +91,7 @@ function play(e){
                     } else {
                         console.log(numSquare - numberOfBombs)
                         messageOutput.innerHTML = `Punteggio: ${scoring}`;
+                        controlBombs(i, bombs, squareSize);
                     }
                     scoring++;
                 }
