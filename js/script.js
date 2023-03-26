@@ -37,6 +37,14 @@ function controlBombs(i, bombs, squareSize){
     }
 }
 
+function coloredAllBombs(bombs, numSquare){
+    const square = document.querySelectorAll('.square');
+    for(let i = 1; i < numSquare; i++){
+        if(bombs.includes(i)){
+            square[i - 1].classList.add('lose');
+        }
+    }
+}
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -80,7 +88,7 @@ function play(e){
         square.addEventListener('click', function(){
             if(!gameOver && !square.classList.contains('safe')){
                 if(bombs.includes(i)){
-                    square.classList.add('lose');
+                    coloredAllBombs(bombs, numSquare);
                     messageOutput.innerHTML = `Hai perso!!!! Il tuo punteggio è ${scoring - 1}`;
                     gameOver = true;
                 } else {
